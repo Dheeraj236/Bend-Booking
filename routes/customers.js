@@ -8,13 +8,7 @@ router.route("/").get((req, res) => {
 });
 
 router.route("/addNewCustomer").post((req, res) => {
-  const { rooms } = req.body;
-  const {
-    customerName,
-    email,
-    phoneNumber,
-    govtidentityProof,
-  } = req.body.customer;
+  const { rooms, customerName, email, phoneNumber, govtidentityProof } = req.body;
 
   const newCustomer = new Customer({
     customerName,
